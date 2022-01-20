@@ -1,0 +1,62 @@
+body {
+    background-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.adminimage {
+    max-height: 2rem;
+}
+
+.h1admin {
+    text-transform: uppercase;
+    font-family: "Anton", sans-serif;
+    color: #e57373;
+    font-weight: 800;
+    padding: 5rem 3rem 1rem 1rem;
+}
+
+.fas {
+    font-size: 1vw;
+    margin-left: 0.25vw;
+}
+
+.crosshair {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+@font-face {
+    font-family: "Pricedown";
+    src: url("http://db.onlinewebfonts.com/t/4cca73663be210d1abb8d4c8879cd5ce.ttf") format("truetype");
+    /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}
+
+.MoneyAnzeige {
+    position: absolute;
+    padding: 0.3vw;
+    color: rgb(114, 204, 114);
+    width: 8vw;
+    border-radius: 0.1vw;
+    left: 90%;
+}
+
+.money {
+    position: absolute;
+    right: 1.25vw;
+    font-family: Pricedown;
+    font-size: 50px;
+    top: 0.3vw;
+    font-weight: 500;
+    letter-spacing: -0.01vw;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px black;
+}

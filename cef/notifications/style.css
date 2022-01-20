@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('Poppins-ExtraLight.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PEL';
+    user-select: none;
+    overflow: hidden;
+}
+
+.notification {
+    padding-top: 5px;
+    padding-bottom: 12px;
+    position: relative;
+    height: auto;
+    width: 200px;
+    background-color: #2B2E30;
+    word-wrap: break-word;
+    border-left: 8px #a3cf89 solid;
+    border-right: 8px #ed9e61 solid;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 3px 3px 3px 3px;
+    padding-right: 5px;
+}
+
+#text {
+    color: #E8E8E9;
+    font-size: 13px;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-top: 1px;
+}
+
+#title {
+    color: red;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
+    font-size: 10px;
+}

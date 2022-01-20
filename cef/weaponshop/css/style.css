@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'PEL';
+    src: url('../fonts/Poppins-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'bahnschrift';
+    src: url('../fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'PT';
+    src: url('fonts/Poppins-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSR';
+    src: url('../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OSL';
+    src: url('../utils/fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'EB';
+    src: url('../utils/fonts/Economica-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ER';
+    src: url('../utils/fonts/Economica-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'RobotoR';
+    src: url('../utils/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+*{
+    user-select: none;
+    overflow: hidden;
+}
+.logo{
+    position: absolute;
+    width: 47.5vw;
+    left: -1vw;
+    top: -0.9vw;
+}
+
+.shopBoxInside{
+    position: absolute;
+    background: #141414;
+    border-radius: 0.8vw;
+    border: transparent;
+    left: 31vw;
+    top: 12vw;
+    width: 41.7vw;
+    height: 27vw;
+    background-image: linear-gradient(#295dab, #140f33);
+    border-top: 0.2vw solid #1f3f6e;
+    border-bottom: 0.2vw solid #1f3f6e;
+
+}
+
+.weaponshopweaponBox{
+    background: rgba(14, 14, 14, 0.446);
+    position: absolute;
+    left: 34vw;
+    width: 15.5vw;
+    top: 19vw;
+    height: 6vw;
+    border-radius: 0.5vw;
+
+}
+.weaponshopweaponBox:hover {
+    font-size: 0.76vw;
+    background: rgb(0, 76, 156);
+}
+.weaponshopweaponBox2{
+    background: rgba(14, 14, 14, 0.446);
+    position: absolute;
+    right: 30.5vw;
+    width: 15.5vw;
+    top: 19vw;
+    height: 6vw;
+    border-radius: 0.5vw;
+
+}
+.weaponshopweaponBox2:hover {
+    font-size: 0.76vw;
+    background: rgb(0, 76, 156);
+}
+
+
+.weaponshopweaponBox3{
+    background: rgba(14, 14, 14, 0.446);
+    position: absolute;
+    left: 34vw;
+    width: 15.5vw;
+    top: 27vw;
+    height: 6vw;
+    border-radius: 0.5vw;
+
+}
+.weaponshopweaponBox3:hover {
+    font-size: 0.76vw;
+    background: rgb(0, 76, 156);
+}
+
+.weaponshopweaponname{
+    font-family: 'bahnschrift';
+    color: #ffffff;
+    position: absolute;
+    left: 1vw;
+    top: .5vw;
+    font-size: 0.7vw;
+    text-shadow: 0vw 0vw 0.2vw rgba(0, 0, 0, 0.541);
+}
+
+.weaponshopweaponimg{
+    position: absolute;
+    height: 4vw;
+    left: .5vw;
+    top: 2.25vw;
+}
+
+.weaponshopweaponprice{
+    font-family: 'bahnschrift';
+    color: white;
+    position: absolute;
+    right: .5vw;
+    bottom: 2.5vw;
+    font-size: 0.7vw;
+}
+
+
+.closebutton{
+    font-family: 'bahnschrift';
+    color: white;
+    position: absolute;
+    left: 34.5vw;
+    bottom: 1.4vw;
+    height: 1.4vw;
+    width: 6vw;
+    border: transparent;
+    background: linear-gradient(-93deg, rgb(255, 0, 0), rgb(155, 0, 0));
+    font-size: 0.7vw; 
+    border-radius: 0.2vw;
+    cursor: pointer;
+    border: 0.1vw solid #0a0a0a;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.closebutton:hover {
+
+    background: rgb(146, 0, 0);
+}

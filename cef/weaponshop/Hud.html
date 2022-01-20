@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ok</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./js/main.js"></script>
+    </head>
+    <body>
+        <div class="shopBox">
+            <div class="shopBoxInside">
+                <img src="./img/shoplogo.8337a4f5.png" class="logo">
+                <button class="closebutton" onclick="closeItemshop()">Schliessen</button>
+
+
+                <input type="number" id="itemvalue" value="1" placeholder="Anzahl">
+            </div>
+        </div>
+
+<!-- Items - Kasten -->
+        
+        <!-- Marksman -->
+        <div class="weaponshopweaponBox" onclick="buyItem('Marksmanrifle')">
+            <label class="weaponshopweaponname"onclick="buyItem('Marksmanrifle')">Marksman - Rifle</label>
+            <img src="./img/Marksman.png" class="weaponshopweaponimg">
+            <label class="weaponshopweaponprice">2.500$</label>
+        </div>
+        <!-- Revolver -->
+        <div class="weaponshopweaponBox2" onclick="buyItem('Revolver')">
+            <label class="weaponshopweaponname"onclick="buyItem('Revolver')">Revolver</label>
+            <img src="./img/revolver.png" class="weaponshopweaponimg">
+            <label class="weaponshopweaponprice" onclick="buyItem('Revolver')">6.000$</label>
+        </div>
+    </body>
+</html>

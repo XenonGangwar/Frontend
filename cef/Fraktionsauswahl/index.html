@@ -1,0 +1,86 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <title></title>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<body style="background: url(assets/img/login-register_background12312321.jpg) no-repeat center center; background-size: cover;">
+    <div class="card">
+        <div class="container">
+            <div class="top">
+                <h2 class="title">Fraktionsauswahl</h2>
+            </div>
+            <div class="content">
+                <div id="officialFactionList" class="fraks" style="display: grid"></div>
+                <h2 class="typetitle" style="width: 100%;">Private Teams</h2>
+                <div id="privateFactionList" class="privfraks" style="display: grid"></div>
+                <button id="submit" onclick="sendaction()" class="submit">Beitreten</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $frak = null;
+
+        function selectGang(gang) {
+            if ($frak != null) {
+                document.getElementById($frak).classList.remove("active");
+            }
+
+            $frak = gang;
+            document.getElementById($frak).classList.add("active");
+            document.getElementById('submit').disabled = false;
+
+        }
+
+        function closecef() {
+            mp.trigger("CloseFrakBrowser");
+        }
+
+        function sendaction() {
+            if ($frak != null) {
+                mp.trigger("Client:TeamBrowser:selectTeam", $frak);
+            }
+        }
+
+        function fillInformations(json) {
+            var phtmlstuff = "",
+                ohtmlstuff = "";
+            json = JSON.parse(json);
+            for (var i in json) {
+                if (json[i].isPrivate) {
+                    phtmlstuff +=
+                        "<div id='" + json[i].factionId + "' onclick='selectGang(`" + json[i].factionId + "`)' class='item'>" +
+                        "<div class='images' style='background: url(assets/img/" + json[i].factionId + ".png);'></div>" +
+                        "<div class='description'>" +
+                        "<h3>" + json[i].factionName + "</h3>" +
+                        "<div class='FrakCount'>" +
+                        "<p class='FrakCount'>" + json[i].memberCount + "</p>" +
+                        "<p class='FrakCount'>&nbsp;&nbsp;&nbsp;Spieler</p>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>";
+                } else {
+                    ohtmlstuff +=
+                        "<div id='" + json[i].factionId + "' onclick='selectGang(`" + json[i].factionId + "`)' class='item'>" +
+                        "<div class='images' style='background: url(assets/img/" + json[i].factionId + ".png);'></div>" +
+                        "<div class='description'>" +
+                        "<h3>" + json[i].factionName + "</h3>" +
+                        "<div class='FrakCount'>" +
+                        "<p class='FrakCount'>" + json[i].memberCount + "</p>" +
+                        "<p class='FrakCount'>&nbsp;&nbsp;&nbsp;Spieler</p>" +
+                        "</div>" +
+                        "</div>" +
+                        "</div>";
+                }
+                $("#officialFactionList").html(ohtmlstuff);
+                $("#privateFactionList").html(phtmlstuff);
+            }
+        }
+    </script>
+</body>
+
+</html>

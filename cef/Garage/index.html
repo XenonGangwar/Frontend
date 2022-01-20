@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="assets/css/garage.css" rel="stylesheet" type="text/css">
+    <title></title>
+</head>
+<body>
+    <div class="card">
+        <div class="container">
+            <div class="top">
+               <div>
+                    <button id="select-1" onclick="selectType(1, 'Bikes')" class="active" style="">Bikes</button>
+                    <button id="select-2" onclick="selectType(2, 'Fahrzeuge')">Fahrzeuge</button>
+                    <button id="select-3" onclick="selectType(3, 'Private-Fahrzeuge')" class="">Private-Fahrzeuge</button>
+                    <button id="select-4" onclick="selectType(4, 'Prestige-Fahrzeuge')" class="">Prestige-Fahrzeuge</button>
+                    <button id="select-5" onclick="selectType(5, 'Fraktion-Fahrzeuge')" class="">Fraktion-Fahrzeuge</button>
+                </div>
+                <a onclick="dismiss()" class="close"><i class="fas fa-times"></i></a>
+            </div>
+            <div class="content">
+                <h2 id="typetitle">Bikes</h2>
+                <div class="vehicles" id="vehicles-1" style="display: grid;"></div>
+                <div class="vehicles" id="vehicles-2"></div>
+                <div class="vehicles" id="vehicles-3"></div>
+                <div class="vehicles" id="vehicles-4"></div>
+                <div class="vehicles" id="vehicles-5"></div>
+
+                <button id="submit" onclick="dispatch()" class="submit">Ausparken</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

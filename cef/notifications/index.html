@@ -1,0 +1,40 @@
+<!-- by UleqitGod. -->
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="" href="index.js">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="notifications">
+        </div>
+
+        <script>
+            $(document).ready(function(){
+            });
+
+            function sendMessage(title, message, color, time) {
+                var $html = $(
+                    `
+                    <div class="notification" style="border-left: 5px ` + color + ` solid;">
+                        <p id="title" style="color: ` + color + `;">` + title + `</p>
+                        <p id="text">` + message + `</p>
+                    </div>
+                    `
+                );
+
+                $(".notifications").prepend($html).fadeIn();
+                $html.fadeOut(0);
+                $html.fadeIn(1000);
+
+                setTimeout(() => {
+                    $html.fadeOut(1000);
+
+                    setTimeout(() => {
+                        $html.remove();
+                    }, 850);
+                }, time);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.card {
+  background: rgba(29, 29, 29, 1);
+  display: block;
+  margin: auto;
+  position: absolute;
+  border-radius: .25rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80rem;
+  width: 100%;
+}
+
+img.gw-logo {
+  position: absolute;
+  left: .5rem;
+  bottom: .5rem;
+  width: 5vw;
+  height: auto;
+  z-index: 10;
+}
+
+.container .top {
+  padding: 1rem;
+  position: relative;
+  background-color: rgb(69,68,67);
+  border-radius: .25rem .25rem 0 0;
+  text-align: center;
+}
+
+.container .top h2 {
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.container .content {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  max-height: 55vh;
+  overflow: hidden;
+}
+.container .content .typetitle {
+  color: rgb(255, 136, 0);
+  padding: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.container .content .submit {
+  outline: none;
+  bottom: .75rem;
+  right: 1rem!important;
+  position: absolute;
+  padding: .5rem 2rem;
+  background-color: transparent;
+  transition: all 125ms ease;
+  border-radius: .25rem;
+  color: rgba(135, 135, 135);
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid rgb(255, 136, 0);
+}
+
+.container .content .submit:disabled {
+  color:rgb(135, 135, 135);
+  cursor: not-allowed;
+  opacity: .75;
+}
+.container .content .submit:enabled {
+  color:rgb(135, 135, 135);
+}
+.container .content .submit:focus, .container .content .submit:active {
+  color:rgb(135, 135, 135);
+}
+
+.container .content .submit:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 136, 0);
+}
+
+.FrakCount {
+  float: left;
+}
+
+.container .content .fraks {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: 4rem;
+  grid-gap: 1rem;
+  grid-auto-rows: 1fr;
+  min-height: 5rem;
+  max-height: 25vh;
+}
+
+.container .content .fraks:nth-child(2), .container .content .fraks:nth-child(3) {
+  display: none;
+}
+
+.container .content .fraks::-webkit-scrollbar {
+  background: rgba(69,68,67,.5);
+  border-radius: 0.25rem;
+}
+
+.container .content .fraks::-webkit-scrollbar-thumb {
+  background: rgb(255, 136, 0);
+  border-radius: 0.25rem;
+}
+
+.container .content .fraks .item, .container .content .privfraks .item {
+  display: grid;
+  grid-template-columns: 4rem auto;
+  height: 4rem;
+  background-color: rgba(29, 29, 29, 1);
+  border: 1px solid rgb(255, 136, 0);
+  border-radius: 0.25rem;
+  color: rgb(135,135,135);
+  transition: all 125ms;
+}
+
+.images  {
+  background-repeat: no-repeat!important;
+  background-position: center!important;
+}
+
+.container .content .fraks .item .description {
+  height: 4rem;
+}
+
+.container .content .fraks .item .description h3, .container .content .privfraks .item .description h3 {
+  text-transform: uppercase;
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.container .content .fraks .item .description p, .container .content .privfraks .item .description p {
+  margin-top: 0;
+  font-weight: 4800;
+  font-size: 0.8rem;
+  opacity: .75;
+}
+
+.container .content .fraks .item:hover, .container .content .privfraks .item:hover {
+  cursor: pointer;
+  background: rgb(255, 136, 0);
+  color: #fff;
+}
+
+.container .content .fraks .item.active, .container .content .privfraks .item.active {
+  background: rgb(255, 136, 0);
+  color: #fff;
+}
+
+.container .content .privfraks {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  overflow-x: auto;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: 4rem;
+  grid-gap: 1rem;
+  grid-auto-rows: 1fr;
+  min-height: 5rem;
+  max-height: 20vh;
+}
+
+.container .content .privfraks:nth-child(2), .container .content .fraks:nth-child(3) {
+  display: none;
+}
+
+.container .content .privfraks::-webkit-scrollbar {
+  background: rgba(69,68,67,.5);
+  border-radius: 0.25rem;
+}
+
+.container .content .privfraks::-webkit-scrollbar-thumb {
+  background: rgb(255, 136, 0);
+  border-radius: 0.25rem;
+}
+
+.container .content .privfraks .item .img {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  width: 3.1rem;
+  height: 3.2rem;
+}
